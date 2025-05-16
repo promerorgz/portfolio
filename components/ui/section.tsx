@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { PropsWithChildren } from 'react';
 
 type SectionProps = {
@@ -8,7 +9,7 @@ type SectionProps = {
   ctaAction?: () => any;
   bg?: boolean;
 };
-const Section = ({ title, children, variant, bg, subtitle }: PropsWithChildren<SectionProps>) => {
+const Section = ({ title, children, bg }: PropsWithChildren<SectionProps>) => {
   const bgClass = bg ? 'bg-gray-50 dark:bg-gray-800' : 'bg-white dark:bg-gray-900';
   return (
     <section className={bgClass}>

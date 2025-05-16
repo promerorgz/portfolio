@@ -3,7 +3,7 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // This would typically come from a database or API
 const projects = [
@@ -54,6 +54,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     techStack: projects[0].techStack,
     caseStudy: projects[0].caseStudy,
   });
+
+  const { slug } = params;
+
+  useEffect(() => {
+    const project = projects.find(p => p.slug === slug);
+    if (project) {
+      setProject(project);
+    }
+  }, [slug]);
 
   return (
     <div className="bg-white dark:bg-gray-900">

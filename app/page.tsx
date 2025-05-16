@@ -5,23 +5,11 @@ import SkillSection from '@/components/SkillSection';
 import { Button } from '@/components/ui/button';
 import { Particles } from '@/components/ui/particles';
 import { data } from '@/lib/data';
-import {
-  ArrowRight,
-  MessageCircle,
-  Code,
-  Github,
-  ExternalLink,
-  Cpu,
-  Server,
-  Download,
-  Database,
-  Cloud,
-  Terminal,
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Download, Github, Terminal } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
 
 export default function Home() {
   const { theme } = useTheme();

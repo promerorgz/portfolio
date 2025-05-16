@@ -167,7 +167,7 @@ export default function FeaturedProjects() {
           viewport={{ once: true }}
           className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
         >
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.map(project => (
             <motion.div
               key={project.name}
               variants={fadeIn}

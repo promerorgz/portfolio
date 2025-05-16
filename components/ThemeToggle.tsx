@@ -1,18 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Activity, ChevronDown, Moon, Sparkles, Sun, Umbrella } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import {
-  Moon,
-  Sun,
-  Palette,
-  ChevronDown,
-  PaintBucket,
-  Sparkles,
-  Umbrella,
-  Activity,
-} from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 type ThemeOption = {
   name: string;

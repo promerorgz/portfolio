@@ -1,13 +1,13 @@
 'use client';
 
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import { Menu, X, Code } from 'lucide-react';
 import { data } from '@/lib/data';
 import { motion } from 'framer-motion';
-import { ThemeToggle } from './ThemeToggle';
+import { Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { ThemeToggle } from './ThemeToggle';
 
 const navigation = [
   { name: 'Home', href: '/' },

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Url } from 'next/dist/shared/lib/router/router';
 
 export interface IRepo {
@@ -83,7 +84,6 @@ export interface IRepo {
   permissions?: any;
 }
 
-type Permissions = {};
 type Owner = {
   login: string | null;
   id: number;
@@ -104,4 +104,3 @@ type Owner = {
   type: string | null;
   site_admin: boolean;
 };
-type License = {};
