@@ -1,17 +1,9 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { data } from "@/lib/data";
-import {
-  Download,
-  Briefcase,
-  GraduationCap,
-  Code,
-  Server,
-  Database,
-  Cloud,
-} from "lucide-react";
-import Link from "next/link";
+import { motion } from 'framer-motion';
+import { data } from '@/lib/data';
+import { Download, Briefcase, GraduationCap, Code, Server, Database, Cloud } from 'lucide-react';
+import Link from 'next/link';
 
 const Resume = () => {
   const fadeInUp = {
@@ -64,19 +56,10 @@ const Resume = () => {
         </div>
 
         {/* Personal Info */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-          className="mb-16"
-        >
+        <motion.div initial="hidden" animate="visible" variants={stagger} className="mb-16">
           <motion.div variants={fadeInUp} className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              {data.name}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-              {data.location}
-            </p>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{data.name}</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">{data.location}</p>
             <div className="flex justify-center space-x-4 text-gray-600 dark:text-gray-300">
               <a
                 href={`mailto:${data.email}`}
@@ -89,7 +72,7 @@ const Resume = () => {
                 href={`tel:${data.phone}`}
                 className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
-                {data.phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")}
+                {data.phone.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3')}
               </a>
               <span>•</span>
               <a
@@ -105,17 +88,10 @@ const Resume = () => {
         </motion.div>
 
         {/* Work Experience */}
-        <motion.section
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-          className="mb-16"
-        >
+        <motion.section initial="hidden" animate="visible" variants={stagger} className="mb-16">
           <motion.div variants={fadeInUp} className="flex items-center mb-8">
             <Briefcase className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Experience
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Experience</h2>
           </motion.div>
 
           <div className="space-y-8">
@@ -127,9 +103,7 @@ const Resume = () => {
               >
                 <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 dark:bg-indigo-400"></div>
                 <div className="mb-1">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    {job.title}
-                  </h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{job.title}</h3>
                   <div className="flex flex-wrap gap-x-2 text-gray-600 dark:text-gray-300">
                     <span className="font-medium">{job.company}</span>
                     <span>•</span>
@@ -145,10 +119,7 @@ const Resume = () => {
 
                 <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
                   {job.highlights.map((highlight, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start text-gray-600 dark:text-gray-300"
-                    >
+                    <li key={i} className="flex items-start text-gray-600 dark:text-gray-300">
                       <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
                       <span className="text-sm">{highlight}</span>
                     </li>
@@ -160,17 +131,10 @@ const Resume = () => {
         </motion.section>
 
         {/* Education */}
-        <motion.section
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-          className="mb-16"
-        >
+        <motion.section initial="hidden" animate="visible" variants={stagger} className="mb-16">
           <motion.div variants={fadeInUp} className="flex items-center mb-8">
             <GraduationCap className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Education
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Education</h2>
           </motion.div>
 
           <motion.div
@@ -182,9 +146,7 @@ const Resume = () => {
               {data.education[0].degree}
             </h3>
             <div className="flex flex-wrap gap-x-2 text-gray-600 dark:text-gray-300">
-              <span className="font-medium">
-                {data.education[0].institution}
-              </span>
+              <span className="font-medium">{data.education[0].institution}</span>
               <span>•</span>
               <span>{data.education[0].location}</span>
               <span>•</span>
@@ -197,9 +159,7 @@ const Resume = () => {
         <motion.section initial="hidden" animate="visible" variants={stagger}>
           <motion.div variants={fadeInUp} className="flex items-center mb-8">
             <Code className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Skills
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Skills</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -253,9 +213,7 @@ const Resume = () => {
             >
               <div className="flex items-center mb-4">
                 <Database className="h-5 w-5 text-indigo-600 dark:text-indigo-400 mr-3" />
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Database
-                </h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Database</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {data.skills[2].technologies.map((tech, i) => (

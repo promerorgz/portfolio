@@ -1,19 +1,18 @@
-"use client";
+'use client';
 
-import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
+import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useState } from 'react';
 
 // This would typically come from a database or API
 const projects = [
   {
-    slug: "e-commerce-platform",
-    title: "E-commerce Platform",
-    description:
-      "A full-stack e-commerce solution built with React and Node.js",
-    image: "https://placehold.co/600x400/png",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Redux"],
+    slug: 'e-commerce-platform',
+    title: 'E-commerce Platform',
+    description: 'A full-stack e-commerce solution built with React and Node.js',
+    image: 'https://placehold.co/600x400/png',
+    techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux'],
     caseStudy: `
       Our e-commerce platform project was born out of the need for a flexible, scalable solution for online businesses. 
       The challenge was to create a system that could handle a wide variety of products, manage user accounts, process 
@@ -148,7 +147,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {project.caseStudy.split("\n\n").map((paragraph, index) => (
+            {project.caseStudy.split('\n\n').map((paragraph, index) => (
               <motion.p
                 key={index}
                 className="mb-4"

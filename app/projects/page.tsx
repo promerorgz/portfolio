@@ -1,30 +1,27 @@
-"use client";
+'use client';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const featuredProjects = [
   {
-    slug: "e-commerce-platform",
-    name: "E-commerce Platform",
-    description:
-      "A full-stack e-commerce solution built with React and Node.js",
+    slug: 'e-commerce-platform',
+    name: 'E-commerce Platform',
+    description: 'A full-stack e-commerce solution built with React and Node.js',
   },
   {
-    slug: "portfolio-website",
-    name: "Portfolio Website",
-    description:
-      "A responsive portfolio website using Next.js and Tailwind CSS",
+    slug: 'portfolio-website',
+    name: 'Portfolio Website',
+    description: 'A responsive portfolio website using Next.js and Tailwind CSS',
   },
   {
-    slug: "task-management-app",
-    name: "Task Management App",
-    description:
-      "A React Native mobile app for managing daily tasks and productivity",
+    slug: 'task-management-app',
+    name: 'Task Management App',
+    description: 'A React Native mobile app for managing daily tasks and productivity',
   },
 ];
 
@@ -64,10 +61,7 @@ export default function ProjectsPage() {
                       {project.description}
                     </p>
                     <Link href={`/projects/${project.slug}`} passHref>
-                      <Button
-                        variant="outline"
-                        className="w-full justify-center group"
-                      >
+                      <Button variant="outline" className="w-full justify-center group">
                         View Case Study
                         <motion.span
                           className="ml-2"

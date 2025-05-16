@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import FeaturedProjects from "@/components/FeaturedProjects";
-import SkillSection from "@/components/SkillSection";
-import { Button } from "@/components/ui/button";
-import { Particles } from "@/components/ui/particles";
-import { data } from "@/lib/data";
+import FeaturedProjects from '@/components/FeaturedProjects';
+import SkillSection from '@/components/SkillSection';
+import { Button } from '@/components/ui/button';
+import { Particles } from '@/components/ui/particles';
+import { data } from '@/lib/data';
 import {
   ArrowRight,
   MessageCircle,
@@ -17,11 +17,11 @@ import {
   Database,
   Cloud,
   Terminal,
-} from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
+} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -29,80 +29,80 @@ export default function Home() {
   // Theme-specific styling for hero section
   const getHeroStyles = () => {
     switch (theme) {
-      case "cyberpunk":
+      case 'cyberpunk':
         return {
-          bg: "bg-gradient-to-b from-purple-900/50 to-black",
-          accent: "text-fuchsia-500",
-          activeBorder: "bg-fuchsia-500",
-          button: "bg-fuchsia-600 hover:bg-fuchsia-700",
-          socialBorder: "border-fuchsia-500",
-          socialHover: "hover:bg-fuchsia-500",
-          terminalText: "text-green-400",
-          additionalClasses: "cyberpunk grid-effect",
-          profileBorder: "border-fuchsia-500",
+          bg: 'bg-gradient-to-b from-purple-900/50 to-black',
+          accent: 'text-fuchsia-500',
+          activeBorder: 'bg-fuchsia-500',
+          button: 'bg-fuchsia-600 hover:bg-fuchsia-700',
+          socialBorder: 'border-fuchsia-500',
+          socialHover: 'hover:bg-fuchsia-500',
+          terminalText: 'text-green-400',
+          additionalClasses: 'cyberpunk grid-effect',
+          profileBorder: 'border-fuchsia-500',
         };
-      case "fc25":
+      case 'fc25':
         return {
-          bg: "bg-gradient-to-b from-amber-900/30 to-gray-900",
-          accent: "text-amber-500",
-          activeBorder: "bg-amber-500",
-          button: "bg-amber-600 hover:bg-amber-700",
-          socialBorder: "border-amber-500",
-          socialHover: "hover:bg-amber-500",
-          terminalText: "text-amber-400",
-          additionalClasses: "fc25 retro-texture",
-          profileBorder: "border-amber-500",
+          bg: 'bg-gradient-to-b from-amber-900/30 to-gray-900',
+          accent: 'text-amber-500',
+          activeBorder: 'bg-amber-500',
+          button: 'bg-amber-600 hover:bg-amber-700',
+          socialBorder: 'border-amber-500',
+          socialHover: 'hover:bg-amber-500',
+          terminalText: 'text-amber-400',
+          additionalClasses: 'fc25 retro-texture',
+          profileBorder: 'border-amber-500',
         };
-      case "beach":
+      case 'beach':
         return {
-          bg: "bg-gradient-to-b from-sky-100 to-blue-100 dark:from-sky-800 dark:to-cyan-900",
-          accent: "text-cyan-600 dark:text-cyan-400",
-          activeBorder: "bg-cyan-600",
-          button: "bg-cyan-600 hover:bg-cyan-700",
-          socialBorder: "border-cyan-500",
-          socialHover: "hover:bg-cyan-500",
-          terminalText: "text-sky-500",
-          additionalClasses: "beach water-pattern",
-          profileBorder: "border-cyan-500",
+          bg: 'bg-gradient-to-b from-sky-100 to-blue-100 dark:from-sky-800 dark:to-cyan-900',
+          accent: 'text-cyan-600 dark:text-cyan-400',
+          activeBorder: 'bg-cyan-600',
+          button: 'bg-cyan-600 hover:bg-cyan-700',
+          socialBorder: 'border-cyan-500',
+          socialHover: 'hover:bg-cyan-500',
+          terminalText: 'text-sky-500',
+          additionalClasses: 'beach water-pattern',
+          profileBorder: 'border-cyan-500',
         };
-      case "light":
+      case 'light':
         return {
-          bg: "bg-gradient-to-b from-white to-gray-50",
-          accent: "text-indigo-600",
-          activeBorder: "bg-indigo-600",
-          button: "bg-indigo-600 hover:bg-indigo-700",
-          socialBorder: "border-indigo-600",
-          socialHover: "hover:bg-indigo-600",
-          terminalText: "text-indigo-600",
-          additionalClasses: "",
-          profileBorder: "border-indigo-600",
+          bg: 'bg-gradient-to-b from-white to-gray-50',
+          accent: 'text-indigo-600',
+          activeBorder: 'bg-indigo-600',
+          button: 'bg-indigo-600 hover:bg-indigo-700',
+          socialBorder: 'border-indigo-600',
+          socialHover: 'hover:bg-indigo-600',
+          terminalText: 'text-indigo-600',
+          additionalClasses: '',
+          profileBorder: 'border-indigo-600',
         };
-      case "dark":
+      case 'dark':
       default:
         return {
-          bg: "bg-gradient-to-b from-gray-900 to-black",
-          accent: "text-indigo-500",
-          activeBorder: "bg-indigo-500",
-          button: "bg-indigo-600 hover:bg-indigo-700",
-          socialBorder: "border-indigo-500",
-          socialHover: "hover:bg-indigo-500",
-          terminalText: "text-indigo-500",
-          additionalClasses: "",
-          profileBorder: "border-indigo-500",
+          bg: 'bg-gradient-to-b from-gray-900 to-black',
+          accent: 'text-indigo-500',
+          activeBorder: 'bg-indigo-500',
+          button: 'bg-indigo-600 hover:bg-indigo-700',
+          socialBorder: 'border-indigo-500',
+          socialHover: 'hover:bg-indigo-500',
+          terminalText: 'text-indigo-500',
+          additionalClasses: '',
+          profileBorder: 'border-indigo-500',
         };
     }
   };
 
   const heroStyles = getHeroStyles() || {
-    bg: "bg-gradient-to-b from-gray-900 to-black",
-    accent: "text-indigo-500",
-    activeBorder: "bg-indigo-500",
-    button: "bg-indigo-600 hover:bg-indigo-700",
-    socialBorder: "border-indigo-500",
-    socialHover: "hover:bg-indigo-500",
-    terminalText: "text-indigo-500",
-    additionalClasses: "",
-    profileBorder: "border-indigo-500",
+    bg: 'bg-gradient-to-b from-gray-900 to-black',
+    accent: 'text-indigo-500',
+    activeBorder: 'bg-indigo-500',
+    button: 'bg-indigo-600 hover:bg-indigo-700',
+    socialBorder: 'border-indigo-500',
+    socialHover: 'hover:bg-indigo-500',
+    terminalText: 'text-indigo-500',
+    additionalClasses: '',
+    profileBorder: 'border-indigo-500',
   };
 
   const fadeIn = {
@@ -125,10 +125,10 @@ export default function Home() {
   };
 
   const stats = [
-    { value: "5+", label: "Years of experience" },
-    { value: "20+", label: "Projects completed" },
-    { value: "15+", label: "Technologies mastered" },
-    { value: "10+", label: "Projects deployed" },
+    { value: '5+', label: 'Years of experience' },
+    { value: '20+', label: 'Projects completed' },
+    { value: '15+', label: 'Technologies mastered' },
+    { value: '10+', label: 'Projects deployed' },
   ];
 
   return (
@@ -147,12 +147,12 @@ export default function Home() {
             refresh
           />
         </div>
-        {theme === "light" ? (
+        {theme === 'light' ? (
           <div className="absolute inset-0 bg-grid-black-100/[0.02]"></div>
         ) : (
           <div className="absolute inset-0 bg-grid-white/[0.03]"></div>
         )}
-        {theme !== "light" && (
+        {theme !== 'light' && (
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         )}
 
@@ -192,16 +192,11 @@ export default function Home() {
                   >
                     npm install success
                   </span>
-                  <span
-                    className={`${heroStyles.terminalText} ml-2 animate-pulse text-xl`}
-                  >
-                    _
-                  </span>
+                  <span className={`${heroStyles.terminalText} ml-2 animate-pulse text-xl`}>_</span>
                 </div>
                 <p className="mt-4 text-base text-muted-foreground sm:mt-5 sm:text-lg md:mt-5 md:text-xl">
-                  I craft modern, responsive web applications with a focus on
-                  clean code, performance, and user experience. Let's turn your
-                  ideas into elegant solutions.
+                  I craft modern, responsive web applications with a focus on clean code,
+                  performance, and user experience. Let's turn your ideas into elegant solutions.
                 </p>
               </motion.div>
 
@@ -263,10 +258,7 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            <motion.div
-              variants={fadeIn}
-              className="order-1 xl:order-none mb-8 xl:mb-0"
-            >
+            <motion.div variants={fadeIn} className="order-1 xl:order-none mb-8 xl:mb-0">
               <div className="relative">
                 <div
                   className={`relative overflow-hidden rounded-full w-[300px] h-[300px] md:w-[400px] md:h-[400px] border-4 ${heroStyles.profileBorder}`}
@@ -297,14 +289,10 @@ export default function Home() {
           >
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div
-                  className={`text-4xl md:text-5xl font-bold ${heroStyles.accent} mb-2`}
-                >
+                <div className={`text-4xl md:text-5xl font-bold ${heroStyles.accent} mb-2`}>
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-muted-foreground">
-                  {stat.label}
-                </div>
+                <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -321,13 +309,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-              Profile
-            </h2>
+            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Profile</h2>
             <div
               className={`mt-2 h-1 w-20 ${
-                heroStyles.activeBorder ||
-                heroStyles.accent.replace("text-", "bg-")
+                heroStyles.activeBorder || heroStyles.accent.replace('text-', 'bg-')
               } mx-auto`}
             ></div>
           </motion.div>
@@ -339,53 +324,31 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                About Me
-              </h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">About Me</h3>
               <p className="text-muted-foreground mb-4">{data.about}</p>
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="flex flex-col space-y-2">
                   <div className="flex items-center">
-                    <span
-                      className={`${heroStyles.accent} text-sm font-medium mr-2`}
-                    >
-                      Name:
-                    </span>
-                    <span className="text-muted-foreground text-sm">
-                      {data.name}
-                    </span>
+                    <span className={`${heroStyles.accent} text-sm font-medium mr-2`}>Name:</span>
+                    <span className="text-muted-foreground text-sm">{data.name}</span>
                   </div>
                   <div className="flex items-center">
-                    <span
-                      className={`${heroStyles.accent} text-sm font-medium mr-2`}
-                    >
+                    <span className={`${heroStyles.accent} text-sm font-medium mr-2`}>
                       Location:
                     </span>
-                    <span className="text-muted-foreground text-sm">
-                      {data.location}
-                    </span>
+                    <span className="text-muted-foreground text-sm">{data.location}</span>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-2">
                   <div className="flex items-center">
-                    <span
-                      className={`${heroStyles.accent} text-sm font-medium mr-2`}
-                    >
-                      Email:
-                    </span>
-                    <span className="text-muted-foreground text-sm">
-                      {data.email}
-                    </span>
+                    <span className={`${heroStyles.accent} text-sm font-medium mr-2`}>Email:</span>
+                    <span className="text-muted-foreground text-sm">{data.email}</span>
                   </div>
                   <div className="flex items-center">
-                    <span
-                      className={`${heroStyles.accent} text-sm font-medium mr-2`}
-                    >
+                    <span className={`${heroStyles.accent} text-sm font-medium mr-2`}>
                       Professional:
                     </span>
-                    <span className="text-muted-foreground text-sm">
-                      Sr. Full Stack Engineer
-                    </span>
+                    <span className="text-muted-foreground text-sm">Sr. Full Stack Engineer</span>
                   </div>
                 </div>
               </div>
@@ -398,29 +361,20 @@ export default function Home() {
               viewport={{ once: true }}
               className="bg-card p-8 rounded-xl"
             >
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Technical Expertise
-              </h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">Technical Expertise</h3>
 
               <div className="space-y-5">
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-sm font-medium text-foreground">
-                      Backend Development
-                    </span>
-                    <span
-                      className={`text-sm font-medium ${heroStyles.accent}`}
-                    >
-                      95%
-                    </span>
+                    <span className="text-sm font-medium text-foreground">Backend Development</span>
+                    <span className={`text-sm font-medium ${heroStyles.accent}`}>95%</span>
                   </div>
                   <div className="w-full h-2 bg-muted rounded-full">
                     <div
                       className={`h-2 ${
-                        heroStyles.activeBorder ||
-                        heroStyles.accent.replace("text-", "bg-")
+                        heroStyles.activeBorder || heroStyles.accent.replace('text-', 'bg-')
                       } rounded-full`}
-                      style={{ width: "95%" }}
+                      style={{ width: '95%' }}
                     ></div>
                   </div>
                 </div>
@@ -430,63 +384,44 @@ export default function Home() {
                     <span className="text-sm font-medium text-foreground">
                       Frontend Development
                     </span>
-                    <span
-                      className={`text-sm font-medium ${heroStyles.accent}`}
-                    >
-                      90%
-                    </span>
+                    <span className={`text-sm font-medium ${heroStyles.accent}`}>90%</span>
                   </div>
                   <div className="w-full h-2 bg-muted rounded-full">
                     <div
                       className={`h-2 ${
-                        heroStyles.activeBorder ||
-                        heroStyles.accent.replace("text-", "bg-")
+                        heroStyles.activeBorder || heroStyles.accent.replace('text-', 'bg-')
                       } rounded-full`}
-                      style={{ width: "90%" }}
+                      style={{ width: '90%' }}
                     ></div>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-sm font-medium text-foreground">
-                      Database Management
-                    </span>
-                    <span
-                      className={`text-sm font-medium ${heroStyles.accent}`}
-                    >
-                      85%
-                    </span>
+                    <span className="text-sm font-medium text-foreground">Database Management</span>
+                    <span className={`text-sm font-medium ${heroStyles.accent}`}>85%</span>
                   </div>
                   <div className="w-full h-2 bg-muted rounded-full">
                     <div
                       className={`h-2 ${
-                        heroStyles.activeBorder ||
-                        heroStyles.accent.replace("text-", "bg-")
+                        heroStyles.activeBorder || heroStyles.accent.replace('text-', 'bg-')
                       } rounded-full`}
-                      style={{ width: "85%" }}
+                      style={{ width: '85%' }}
                     ></div>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-sm font-medium text-foreground">
-                      Cloud & DevOps
-                    </span>
-                    <span
-                      className={`text-sm font-medium ${heroStyles.accent}`}
-                    >
-                      80%
-                    </span>
+                    <span className="text-sm font-medium text-foreground">Cloud & DevOps</span>
+                    <span className={`text-sm font-medium ${heroStyles.accent}`}>80%</span>
                   </div>
                   <div className="w-full h-2 bg-muted rounded-full">
                     <div
                       className={`h-2 ${
-                        heroStyles.activeBorder ||
-                        heroStyles.accent.replace("text-", "bg-")
+                        heroStyles.activeBorder || heroStyles.accent.replace('text-', 'bg-')
                       } rounded-full`}
-                      style={{ width: "80%" }}
+                      style={{ width: '80%' }}
                     ></div>
                   </div>
                 </div>
@@ -506,12 +441,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-              My Experience
-            </h2>
-            <div
-              className={`mt-2 h-1 w-20 ${heroStyles.activeBorder} mx-auto`}
-            ></div>
+            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">My Experience</h2>
+            <div className={`mt-2 h-1 w-20 ${heroStyles.activeBorder} mx-auto`}></div>
           </motion.div>
 
           <div className="relative">
@@ -529,7 +460,7 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative flex items-center ${
-                    index % 2 === 0 ? "flex-row-reverse" : ""
+                    index % 2 === 0 ? 'flex-row-reverse' : ''
                   }`}
                 >
                   {/* Timeline dot */}
@@ -538,26 +469,16 @@ export default function Home() {
                   ></div>
 
                   {/* Content */}
-                  <div
-                    className={`w-5/12 ${
-                      index % 2 === 0 ? "text-right pr-8" : "pl-8"
-                    }`}
-                  >
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'pl-8'}`}>
                     <div className="bg-card p-6 rounded-lg shadow-lg">
                       <span
                         className={`inline-block px-3 py-1 text-xs font-semibold rounded-full ${heroStyles.activeBorder}/20 ${heroStyles.accent} mb-2`}
                       >
                         {job.period}
                       </span>
-                      <h3 className="text-xl font-bold text-foreground mb-1">
-                        {job.title}
-                      </h3>
-                      <h4 className={`${heroStyles.accent} mb-3`}>
-                        {job.company}
-                      </h4>
-                      <p className="text-muted-foreground text-sm">
-                        {job.description}
-                      </p>
+                      <h3 className="text-xl font-bold text-foreground mb-1">{job.title}</h3>
+                      <h4 className={`${heroStyles.accent} mb-3`}>{job.company}</h4>
+                      <p className="text-muted-foreground text-sm">{job.description}</p>
                     </div>
                   </div>
 
@@ -589,8 +510,8 @@ export default function Home() {
               to the next level?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              What led you here? What are you looking for? I would love to hear
-              from you over a virtual coffee chat!
+              What led you here? What are you looking for? I would love to hear from you over a
+              virtual coffee chat!
             </p>
             <Link href="/contact" passHref>
               <Button

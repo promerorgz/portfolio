@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import {
   Moon,
   Sun,
@@ -11,8 +11,8 @@ import {
   Sparkles,
   Umbrella,
   Activity,
-} from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type ThemeOption = {
   name: string;
@@ -28,39 +28,39 @@ export function ThemeToggle() {
 
   const themes: ThemeOption[] = [
     {
-      name: "Light",
-      value: "light",
+      name: 'Light',
+      value: 'light',
       icon: <Sun className="h-4 w-4" />,
-      color: "bg-blue-50",
+      color: 'bg-blue-50',
     },
     {
-      name: "Dark",
-      value: "dark",
+      name: 'Dark',
+      value: 'dark',
       icon: <Moon className="h-4 w-4" />,
-      color: "bg-gray-900",
+      color: 'bg-gray-900',
     },
     {
-      name: "Cyberpunk",
-      value: "cyberpunk",
+      name: 'Cyberpunk',
+      value: 'cyberpunk',
       icon: <Sparkles className="h-4 w-4" />,
-      color: "bg-purple-700",
+      color: 'bg-purple-700',
     },
     {
-      name: "FC25",
-      value: "fc25",
+      name: 'FC25',
+      value: 'fc25',
       icon: <Activity className="h-4 w-4" />,
-      color: "bg-amber-500",
+      color: 'bg-amber-500',
     },
     {
-      name: "Beach",
-      value: "beach",
+      name: 'Beach',
+      value: 'beach',
       icon: <Umbrella className="h-4 w-4" />,
-      color: "bg-cyan-400",
+      color: 'bg-cyan-400',
     },
   ];
 
   // Find current theme object
-  const currentTheme = themes.find((t) => t.value === theme) || themes[0]; // Default to light
+  const currentTheme = themes.find(t => t.value === theme) || themes[0]; // Default to light
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -74,8 +74,8 @@ export function ThemeToggle() {
     }
 
     if (isOpen) {
-      document.addEventListener("click", handleClickOutside);
-      return () => document.removeEventListener("click", handleClickOutside);
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
     }
   }, [isOpen]);
 
@@ -86,7 +86,7 @@ export function ThemeToggle() {
   return (
     <div className="relative">
       <button
-        onClick={(e) => {
+        onClick={e => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
@@ -95,9 +95,7 @@ export function ThemeToggle() {
       >
         <span className="flex items-center gap-1">
           {currentTheme.icon}
-          <span className="text-xs font-medium hidden sm:inline">
-            {currentTheme.name}
-          </span>
+          <span className="text-xs font-medium hidden sm:inline">{currentTheme.name}</span>
           <ChevronDown className="h-3 w-3" />
         </span>
       </button>
@@ -110,9 +108,9 @@ export function ThemeToggle() {
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.1 }}
             className="absolute right-0 mt-2 w-40 bg-card text-card-foreground rounded-md shadow-lg py-1 z-50 border border-border"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
-            {themes.map((themeOption) => (
+            {themes.map(themeOption => (
               <button
                 key={themeOption.value}
                 onClick={() => {
@@ -120,12 +118,10 @@ export function ThemeToggle() {
                   setIsOpen(false);
                 }}
                 className={`w-full text-left px-3 py-2 text-sm flex items-center gap-2 hover:bg-muted transition-colors ${
-                  theme === themeOption.value ? "bg-muted" : ""
+                  theme === themeOption.value ? 'bg-muted' : ''
                 }`}
               >
-                <span
-                  className={`h-4 w-4 rounded-full flex-shrink-0 ${themeOption.color}`}
-                ></span>
+                <span className={`h-4 w-4 rounded-full flex-shrink-0 ${themeOption.color}`}></span>
                 {themeOption.name}
               </button>
             ))}

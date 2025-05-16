@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Github, Linkedin, Twitter } from "lucide-react"
+import Link from 'next/link';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -29,10 +29,11 @@ export default function Footer() {
           </Link>
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-400">&copy; 2023 Your Name. All rights reserved.</p>
+          <p className="text-center text-base text-gray-400">
+            &copy; 2023 Your Name. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["placehold.co"], // Add any external image domains you'll use
+    domains: ['placehold.co'], // Add any external image domains you'll use
   },
   // Enable static exports for static hosting if needed
   // output: 'export',

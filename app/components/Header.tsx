@@ -1,21 +1,21 @@
-"use client"
+'use client';
 
-import Link from "next/link"
-import { useState } from "react"
-import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import Link from 'next/link';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { Menu, X } from 'lucide-react';
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
-]
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
+];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="bg-white shadow-sm dark:bg-gray-800">
@@ -27,14 +27,14 @@ export default function Header() {
             </Link>
           </div>
           <div className="ml-10 hidden space-x-8 lg:block">
-            {navigation.map((link) => (
+            {navigation.map(link => (
               <Link
                 key={link.name}
                 href={link.href}
                 className={`text-base font-medium ${
                   pathname === link.href
-                    ? "text-indigo-600 dark:text-indigo-400"
-                    : "text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                    ? 'text-indigo-600 dark:text-indigo-400'
+                    : 'text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white'
                 }`}
               >
                 {link.name}
@@ -53,14 +53,14 @@ export default function Header() {
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-          {navigation.map((link) => (
+          {navigation.map(link => (
             <Link
               key={link.name}
               href={link.href}
               className={`text-base font-medium ${
                 pathname === link.href
-                  ? "text-indigo-600 dark:text-indigo-400"
-                  : "text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                  ? 'text-indigo-600 dark:text-indigo-400'
+                  : 'text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white'
               }`}
             >
               {link.name}
@@ -88,7 +88,7 @@ export default function Header() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((link) => (
+                  {navigation.map(link => (
                     <Link
                       key={link.name}
                       href={link.href}
@@ -105,6 +105,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }
-

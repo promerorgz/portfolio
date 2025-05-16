@@ -178,7 +178,9 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
   }
 
   h1,
@@ -226,43 +228,30 @@
   /* Radial gradient mask for spotlight effect */
   .mask-radial-gradient {
     mask-image: radial-gradient(circle at center, black, transparent 70%);
-    -webkit-mask-image: radial-gradient(
-      circle at center,
-      black,
-      transparent 70%
-    );
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 70%);
   }
 
   /* Theme-specific background effects */
   .cyberpunk .neon-glow {
-    box-shadow: 0 0 5px theme("colors.primary.DEFAULT"),
-      0 0 20px theme("colors.primary.DEFAULT");
+    box-shadow:
+      0 0 5px theme('colors.primary.DEFAULT'),
+      0 0 20px theme('colors.primary.DEFAULT');
   }
 
   .cyberpunk .grid-effect {
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 0, 170, 0.1) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(to right, rgba(255, 0, 170, 0.1) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 0, 170, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
   .fc25 .retro-texture {
-    background-image: radial-gradient(
-      transparent 0px,
-      rgba(255, 150, 50, 0.05) 1px
-    );
+    background-image: radial-gradient(transparent 0px, rgba(255, 150, 50, 0.05) 1px);
     background-size: 4px 4px;
   }
 
   .beach .water-pattern {
-    background: linear-gradient(
-      to right,
-      rgba(0, 150, 199, 0.1),
-      rgba(0, 150, 199, 0.05)
-    );
+    background: linear-gradient(to right, rgba(0, 150, 199, 0.1), rgba(0, 150, 199, 0.05));
     background-size: 10px 10px;
   }
 }

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { data } from "@/lib/data";
-import { motion } from "framer-motion";
-import { Server, Code, Database, Cloud } from "lucide-react";
+import Image from 'next/image';
+import { data } from '@/lib/data';
+import { motion } from 'framer-motion';
+import { Server, Code, Database, Cloud } from 'lucide-react';
 
 export default function About() {
   const container = {
@@ -36,8 +36,7 @@ export default function About() {
         >
           <motion.div variants={item}>
             <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl mb-8">
-              About{" "}
-              <span className="text-indigo-600 dark:text-indigo-400">Me</span>
+              About <span className="text-indigo-600 dark:text-indigo-400">Me</span>
             </h1>
 
             <motion.p
@@ -64,25 +63,21 @@ export default function About() {
                     <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                       {job.period} | {job.location}
                     </p>
-                    <p className="mt-3 text-gray-600 dark:text-gray-300">
-                      {job.description}
-                    </p>
+                    <p className="mt-3 text-gray-600 dark:text-gray-300">{job.description}</p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
 
             <motion.div variants={item} className="mt-10">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Education
-              </h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Education</h2>
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {data.education[0].degree}
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
-                  {data.education[0].institution} | {data.education[0].location}{" "}
-                  | Graduated {data.education[0].year}
+                  {data.education[0].institution} | {data.education[0].location} | Graduated{' '}
+                  {data.education[0].year}
                 </p>
               </div>
             </motion.div>
@@ -192,10 +187,9 @@ export default function About() {
             <motion.div variants={item} className="mt-10">
               <div className="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-lg border border-indigo-100 dark:border-indigo-900/50">
                 <p className="text-gray-700 dark:text-gray-300 italic">
-                  "I'm passionate about building clean, performant applications
-                  that solve real-world problems. With experience across
-                  multiple industries, I've developed a versatile approach to
-                  software engineering focused on delivering high-quality
+                  "I'm passionate about building clean, performant applications that solve
+                  real-world problems. With experience across multiple industries, I've developed a
+                  versatile approach to software engineering focused on delivering high-quality
                   solutions."
                 </p>
               </div>

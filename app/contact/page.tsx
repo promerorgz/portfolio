@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import { BorderBeam } from "@/components/ui/BorderBeam";
-import { useState } from "react";
+import { BorderBeam } from '@/components/ui/BorderBeam';
+import { useState } from 'react';
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    console.log("Form submitted:", { name, email, message });
+    console.log('Form submitted:', { name, email, message });
     // Reset form fields
-    setName("");
-    setEmail("");
-    setMessage("");
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
@@ -26,12 +26,10 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
-              <h3 className="text-lg font-medium text-white">
-                Contact information
-              </h3>
+              <h3 className="text-lg font-medium text-white">Contact information</h3>
               <p className="mt-6 text-base text-indigo-50 max-w-3xl">
-                Feel free to reach out to me for any inquiries or collaboration
-                opportunities. I'm always excited to work on new projects!
+                Feel free to reach out to me for any inquiries or collaboration opportunities. I'm
+                always excited to work on new projects!
               </p>
               <dl className="mt-8 space-y-6">
                 <dt>
@@ -78,7 +76,7 @@ export default function Contact() {
                       id="name"
                       autoComplete="name"
                       value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      onChange={e => setName(e.target.value)}
                       className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     />
                   </div>
@@ -97,7 +95,7 @@ export default function Contact() {
                       type="email"
                       autoComplete="email"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={e => setEmail(e.target.value)}
                       className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     />
                   </div>
@@ -115,7 +113,7 @@ export default function Contact() {
                       name="message"
                       rows={4}
                       value={message}
-                      onChange={(e) => setMessage(e.target.value)}
+                      onChange={e => setMessage(e.target.value)}
                       className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     ></textarea>
                   </div>
